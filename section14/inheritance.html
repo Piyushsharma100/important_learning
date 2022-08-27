@@ -1,0 +1,43 @@
+<!-- class inheritance -->
+<!-- inherit buit in object
+--Date
+--STRING
+--ARRAY -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Father {
+        showFMoney() {
+          return "father money<br>";
+        }
+      }
+
+      class Son extends Father {
+        showSMoney() {
+          return "son money";
+        }
+      }
+
+      class GrandSon extends Son {
+        showGMoney() {
+          return "grandson money";
+        }
+      }
+      //   var s = new Son();
+      //   document.write(s.showFMoney());
+      //   document.write(s.showSMoney());
+
+      var g = new GrandSon();
+      document.write(g.showFMoney());
+      document.write(g.showSMoney());
+      document.write(g.showGMoney());
+    </script>
+  </body>
+</html>
