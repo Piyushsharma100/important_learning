@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dataTransformations</title>
+  </head>
+  <body>
+    <script>
+      // data Transformations:Map,filter,reduce
+      // map returns a new array containing the result of applying  an operation on an original array element.
+      //filter returns a new array containing the array elements that passed a specific test condition.
+      // reduce boils("reduces") all array elements down to one single value (e.g adding all the elements together)// does not change the original array
+
+      // map() function
+      var ary = [11, 4, 9, 16];
+      var b = ary.map(test);
+      document.write(b);
+      function test(x) {
+        return x * 10;
+      }
+
+      // //map in array of objects
+
+      // var ary = [
+      //   { fname: "piyush", lname: "sharma" },
+      //   { fname: "rahul", lname: "kumar" },
+      //   { fname: "karan", lname: "sharma" },
+      // ];
+      // var b = ary.map(test);
+      // document.write(b);
+      // function test(x) {
+      //   return x.fname + " " + x.lname;
+      // }
+
+      //filter() methods   // filter() method creates an array filled with all array elements that pass a test
+      var ages = [10, 12, 19, 20];
+      document.write(ages + "<br><br>");
+
+      var b = ages.filter(checkAdult);
+      document.write(b + "<br><br>");
+      function checkAdult(age) {
+        return age >= 18;
+      }
+
+      // reduce method
+      var arr = [1, 2, 3, 4, 5];
+      var total = 0;
+      document.write(arr + "<br> ");
+      total = arr.reduce((total, num) => {
+        return total + num;
+      });
+      document.write(total);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>some and every method</title>
+  </head>
+  <body>
+    <script>
+
+        // array--> some() function
+      // array - some() function    ---> checks if any of the elements in an array pass a test
+      var ages = [10, 13, 18, 20];
+      document.write(ages + "<br><br>");
+
+      var b = ages.some(checkAdult);
+      document.write(b + "<br><br>");
+
+      function checkAdult(age) {
+        return age >= 18;
+      }
+
+
+      // every() function
+
+      var howOld=[10,13,15,2];
+      document.write(howOld + "<br><br>");
+
+      var b = howOld.every(checkAdult);
+      document.write(b + "<br><br>");
+
+      function checkAdult(age){
+          return age >= 18;
+      }
+    
+
+    </script>
+  </body>
+</html>

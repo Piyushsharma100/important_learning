@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Registration</title>
+    <link rel="stylesheet" href="applicationForm.css" />
+  </head>
+  <body>
+    <br />
+    <center><h1>User Registration</h1></center>
+    <br /></br></br>
+
+    <center>
+      <form class="secondForm" action="table.html" onclick="return valid()" >
+        <label> <b>Firstname:</b> </label>
+        <input type="text" name="firstname" id="fname" placeholder="First Name" required/> <br />
+        <br />
+        <label><b> Lastname:</b> </label>
+        <input type="text" name="lastname" id="lname" placeholder="Last Name" required/> <br /><br />
+        <label><b> Training :</b> </label>
+        <select>
+          <option value="training">TRAINING</option>
+          <option value="java">JAVA</option>
+          <option value="python">PYTHON</option>
+          <option value="javacsript">JAVACSRIPT</option>
+          <option value="node js">NODE JS</option>
+          <option value="artificial intelligence">
+            ARTIFICIAL INTELLIGENCE
+          </option>
+          <option value="data science">DATA SCIENCE</option>
+        </select>
+        <br/>
+        <br /><br />
+
+        &nbsp;   <label><b> Gender : </b></label><br />
+        <input type="radio" name="male" /><b id="m"> Male</b> <br />
+        &nbsp; &nbsp;    <input type="radio" name="female" /> <b id="m">Female</b> <br />
+        &nbsp;   <input type="radio" name="other" /><b id="m"> Other</b>
+        <br />
+        <br /><br/>
+
+      <label><b> Phone : </b></label>
+        <input
+          type="text"
+          name="country code"
+          value="+91"
+          size="2"
+          id="ccode"
+        />
+        <input type="tel" name="phone" size="10" id="cnumber" placeholder="Phone Number" required/> <br />
+        <br />
+
+        <br />
+        &nbsp;  &nbsp;   <b id="b"> Email: </b>
+        <input type="email" id="email" name="email" placeholder="Email"  required/> <br />
+        <br />
+        <br />
+
+        <input type="button" value="Submit" id="sub" />
+      </form>
+    </center>
+
+    <button type="button" id="login" onclick="location.href='index.html';">
+      log out
+    </button>
+    <button type="button" id="blog" onclick="location.href='frontCss.html';">
+      My Blog
+    </button>
+
+    <script src="applicationForm.js"></script>
+  </body>
+</html>
