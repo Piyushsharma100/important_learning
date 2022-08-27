@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bigInt</title>
+  </head>
+  <body>
+    <h2>working with bigInt</h2>
+    //Number.MAX_SAFE_INTEGER---->9007199254740991(2**53 -1) if we want to
+    operate above than this number then we should choose bigInt
+    <script>
+      console.log(2 ** 53 - 1);
+      console.log(Number.MAX_SAFE_INTEGER);
+      console.log(2 ** 53 + 1);
+      console.log(2 ** 53 + 3);
+      console.log(2 ** 53 + 4);
+
+      // hoe to create bigInt
+      console.log(4838430248342043823408394839483204n);
+      console.log(BigInt(483843021));
+      // operation
+      console.log(10000n + 10000n);
+      console.log(3456789034567892345678934n * 1000000n);
+
+      const huge = 20345678956789999978n;
+      const num = 23;
+      console.log(huge * BigInt(num));
+
+      // exceptions
+      console.log(20n > 15);
+      console.log(20n === 20);
+      console.log(typeof 20n);
+      console.log(20n == "15");
+
+      // divisions
+      console.log(11n / 3n);
+      console.log(10 / 3);
+    </script>
+  </body>
+</html>

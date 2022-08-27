@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ArrayMethod</title>
+  </head>
+  <body>
+    <center>
+      <h2>section-11(Array method)</h2>
+      <h2>slice() method</h2>
+    </center>
+    <h2 class="arrayMethod"></h2>
+
+    <script>
+      "use strict";
+      let arr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+      //slice method
+
+      console.log(arr.slice(2)); //
+      console.log(arr.slice(2, 4)); //
+      console.log(arr.slice(-2)); //
+      console.log(arr.slice(-1)); //
+      console.log(arr.slice(1, -2)); //
+      console.log(arr.slice(1, 2)); //
+      console.log(arr.slice()); //
+      // console.log(arr.slice(...arr));
+      console.log([...arr]); // spread operator
+
+      var str = "Hey team,learn code";
+      document.write(str.slice(4, 14) + " "); //14 is not included
+      // document.write(arr.slice(2));
+
+      //splice()---it can muted  the original array,it does actually change the original array
+      let spl = ["a", "b", "c", "d", "e"];
+      console.log(spl.splice(2)); //[c,d,e]
+      console.log(spl.splice(-1));
+      console.log(...spl);
+
+      // reverse()  // also muted method
+      arr = ["a", "b", "c", "d", "e"];
+      const arr2 = ["j", "i", "h", "g", "f"];
+      console.log(arr2.reverse());
+      console.log(arr2);
+
+      // concat method
+      const letters = arr.concat(arr2);
+      console.log(letters);
+      console.log([...arr, ...arr2]);
+
+      // join
+      console.log(letters.join(" - "));
+
+      // At method   --- also work on string  
+
+      const arrAt = [23, 11, 64];
+      console.log(arrAt[0]);
+      console.log(arrAt.at(0));
+
+      // getting the last element
+      console.log(arrAt[arrAt.length - 1]);
+      console.log(arrAt.slice(-1)[0]);
+      console.log(arrAt.at(-1));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forEach</title>
+    <h2>looping array</h2>
+    <h3>forEach</h3>
+  </head>
+  <body>
+    <script>
+      // forEach
+
+      const movements = [200, 450, -400, 300, -650, -130, 70, 1300]; // positive values are deposite and negative values are withdrew
+
+      for (const movement of movements) {
+        if (movement > 0) {
+          console.log(`you deposited ${movement}`);
+        } else {
+          console.log(`you withdrew ${Math.abs(movement)}`); //absolute value(for removing the sign)
+        }
+      }
+
+      console.log("-------forEach------");
+
+      movements.forEach(function (movement) {
+        if (movement > 0) {
+          console.log(`you deposited ${movement}`);
+        } else {
+          console.log(`you withdrew ${Math.abs(movement)}`); //absolute value(for removing the sign)
+        }
+      });
+
+      // for (const [i,movement] of movements.entries()) {
+      // if (movement > 0) {
+      //   console.log(`Movement ${i+1}you deposited ${movement}`);
+      //     } else {
+      //       console.log(`Movement${i+1}you withdrew ${Math.abs(movement)}`); //absolute value(for removing the sign)
+      //     }
+      //   }
+
+      //     console.log("-------forEach------");
+
+      // movements.forEach(function (mov,i,arr) {
+      //   if (movement > 0) {
+      //     console.log(`Movement ${i+1} you deposited ${mov}`);
+      //   } else {
+      //     console.log(`Movement ${i+1}:you withdrew ${Math.abs(mov)}`); //absolute value(for removing the sign)
+      //   }
+      // });
+    </script>
+  </body>
+</html>

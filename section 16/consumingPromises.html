@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //consuming promises
+      //  consume a promise by calling then() and catch() methods on the promise.
+      //.then() syntax: promise.then(successCallback, failureCallback)
+
+      /* .then() syntax: promise.then(successCallback, failureCallback)
+      The successCallback is called when a promise is resolved. It takes one argument which is the value passed to resolve().
+      The failureCallback is called when a promise is rejected. It takes one argument which is the value passed to reject().*/
+
+      const promise = new Promise((resolve, reject) => {
+        const randomNumber = Math.random();
+
+        if (randomNumber < 0.7) {
+          resolve("All things went well!");
+        } else {
+          reject(new Error("Something went wrong"));
+        }
+      });
+      promise.then(
+        (data) => {
+          console.log(data); // prints 'All things went well!'
+        },
+        (error) => {
+          console.log(error); // prints Error object
+        }
+      );
+
+      //       const promise = new Promise((resolve, reject) => {
+      //   const randomNumber = Math.random();
+
+      //   if(randomNumber < .7) {
+      //     resolve('All things went well!');
+      //   } else {
+      //     reject(new Error('Something went wrong'));
+      //   }
+      // });
+      // promise.then((data) => {
+      //   console.log(data);  // prints 'All things went well!'
+      //   },
+      //   (error) => {
+      //   console.log(error); // prints Error object
+      //   }
+      // );
+
+      //Promise Chaining
+      /*The then() and catch() methods can also return a new promise which can be handled by chaining another then() at the end of the previous then() method.*/
+      const promise1 = new Promise((resolve, reject) => {
+        resolve("Promise1 resolved");
+      });
+      const promise2 = new Promise((resolve, reject) => {
+        resolve("Promise2 resolved");
+      });
+      const promise3 = new Promise((resolve, reject) => {
+        reject("Promise3 rejected");
+      });
+      promise1
+        .then((data) => {
+          console.log(data); // Promise1 resolved
+          return promise2;
+        })
+        .then((data) => {
+          console.log(data); // Promise2 resolved
+          return promise3;
+        })
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          console.log(error); // Promise3 rejected
+        });
+    </script>
+  </head>
+  <body></body>
+</html>

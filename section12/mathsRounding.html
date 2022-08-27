@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mathsRounding</title>
+  </head>
+  <body>
+    <h2>math and rounding</h2>
+
+    <script>
+      //Math.ceil()//
+      var a = Math.ceil(5.2); //6
+      var b = Math.ceil(-1.45); //-1
+      var c = Math.ceil(1.45); //2
+      document.write(a + "<br>");
+      document.write(b + "<br>");
+      document.write(c + "<br><br><br><br>");
+
+      //Math.floor()//
+      var d = Math.floor(5.2); //5
+      var e = Math.floor(-1.45); //-2
+      var f = Math.floor(1.45); //1
+      document.write(d + "<br>");
+      document.write(e + "<br>");
+      document.write(f + "<br><br><br><br>");
+
+      // Math.round
+      var g = Math.round(5.3); //5
+      var h = Math.round(-1.45); //-1
+      var i = Math.round(1.45); //1
+      document.write(g + "<br>");
+      document.write(h + "<br>");
+      document.write(i + "<br><br><br>");
+
+      // Math.trunc()// integer value return
+      var j = Math.trunc(5.3); //5
+      var k = Math.trunc(-1.45); //-1
+      var l = Math.trunc(1.45); //1
+      document.write(j + "<br>");
+      document.write(k + "<br>");
+      document.write(l + "<br><br><br><br>");
+
+      //max(x,y,...,n)/min(x,y,...,n)
+      var m = Math.max(8, 10, 2, 50, 25);
+      document.write(m, "<br><br>");
+      var n = Math.min(8, -10, -2, 50, 25);
+      document.write(n, "<br><br><br>");
+
+      // Math.sqrt()
+      var o = Math.sqrt(64);
+      document.write(o, "<br><br><br>");
+      //Math.cbrt()
+      var p = Math.cbrt(125);
+      document.write(p, "<br><br><br>");
+      //Math.pow()
+      var q = Math.pow(4, 3);
+      document.write(q, "<br><br><br>");
+      //Math.random()
+      var r = Math.random();
+      document.write(r, "<br><br><br>");
+
+      var s = Math.floor(Math.random() * 10) + 1;
+      document.write(s, "<br><br><br>");
+
+      //Math.abs()
+      var t = Math.abs(5.25); //5.25
+      var u = Math.abs(null);
+      var v = Math.abs(-12.45);
+      var w = Math.abs("hello");
+      var x = Math.abs(2 + 3);
+      document.write(t + "<br>");
+      document.write(u + "<br>");
+      document.write(v + "<br>");
+      document.write(w + "<br>");
+      document.write(x + "<br>");
+    </script>
+  </body>
+</html>

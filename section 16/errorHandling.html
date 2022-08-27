@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>errorhandling</title>
+    <script>
+      console.log("This is error handling");
+
+      // Pretend this is coming from a server as response
+      let a = "piyush";
+      a = undefined;
+      if (a != undefined) {
+        throw new Error("This is not undefined");
+      } else {
+        console.log("This is undefined");
+      }
+
+      try {
+        null.console;
+        console.log("We are inside try block");
+
+        functionHarry();
+      } catch (error) {
+        console.log(error);
+        console.log("Are you okay?");
+        console.log(error.name);
+        console.log(error.message);
+      } finally {
+        console.log("Finally we will run this");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

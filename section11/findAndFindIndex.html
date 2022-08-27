@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>find() And FindIndex()</title>
+  </head>
+  <body>
+    <h2>array - find() and FindIndex()</h2>
+    <p>
+      find() method returns the value of the first element in an array that pass
+      the test
+    </p>
+    <br />
+    <p>
+      findIndex() method return the index of the first element in an array that
+      pass a test
+    </p>
+
+    <script>
+      //find() method
+      var ages = [10, 23, 19, 20];
+      document.write(ages + "<br><br>");
+
+      var b = ages.find(checkAdult);
+      document.write(b + "<br><br>");
+
+      function checkAdult(age) {
+        return age >= 18;
+      }
+
+      //findIndex() method
+      var howOld = [10, 23, 19, 20];
+      document.write(howOld + "<br><br>");
+
+      var b = howOld.findIndex(checkAdult);
+      document.write(b + "<br><br>");
+
+      function checkAdult(age) {
+        return age >= 18;
+      }
+    </script>
+  </body>
+</html>
